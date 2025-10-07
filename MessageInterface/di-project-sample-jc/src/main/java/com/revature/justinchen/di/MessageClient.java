@@ -14,5 +14,14 @@ public class MessageClient {
         service.setMessage(message);
         System.out.println("Processed message: " + service.getMessage());
     }
+        // custom init method
+    public void init() {
+        System.out.println("MessageClient bean is initializing...");
+    }
+
+    // custom destroy method
+    public void cleanup() {
+        System.out.println("MessageClient bean is being destroyed...");
+    }
 }
 

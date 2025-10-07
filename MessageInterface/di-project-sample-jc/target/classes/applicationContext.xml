@@ -11,7 +11,15 @@
      <property name="propertyName" value="propertyValue"/>
     </bean>
     -->
-    <bean id="messageService" class="com.example.MessageService">
-        <constructor-arg value="Hello, World!"/>
+     <!-- Define EmailService bean -->
+    <bean id="emailService" class="com.revature.justinchen.di.EmailService" />
+
+    <!-- Define SMSService bean -->
+    <bean id="smsService" class="com.revature.justinchen.di.SMSService" />
+
+    <!-- Define MessageClient bean with init/destroy -->
+    <bean id="messageClient" class="com.revature.justinchen.di.MessageClient"
+          init-method="init" destroy-method="cleanup">
+        <property name="service" ref="emailService"/>
     </bean>
 </beans>

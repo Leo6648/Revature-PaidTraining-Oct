@@ -12,5 +12,13 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
-
+    <!-- Add dependencies here -->
+<dependencies>
+    <!-- Spring Context (includes core, beans, and expression language) -->
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>6.1.12</version> <!-- use the latest stable version -->
+    </dependency>
+</dependencies>
 </project>
