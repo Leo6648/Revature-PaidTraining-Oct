@@ -1,7 +1,5 @@
 package com.revature.payproc.jc;
 
-import com.revature.payproc.jc.PaymentService;
-
 public class OrderService {
     private PaymentService paymentService;
 
