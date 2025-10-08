@@ -14,11 +14,10 @@
     </properties>
     <!-- Add dependencies here -->
 <dependencies>
-<!-- Spring Boot Starter (includes Spring Context transitively) -->
-<dependency>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter</artifactId>
-    <version>3.5.6</version> <!-- Use the latest 3.2.x patch version -->
-</dependency>
+    <dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-context</artifactId>
+        <version>6.1.13</version> <!-- Latest stable version -->
+    </dependency>
 </dependencies>
 </project>

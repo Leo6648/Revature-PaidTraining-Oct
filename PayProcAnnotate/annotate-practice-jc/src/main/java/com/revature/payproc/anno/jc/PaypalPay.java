@@ -1,7 +1,6 @@
 package com.revature.payproc.anno.jc;
 import org.springframework.stereotype.Service;
 
-@Service("paypalPay")
 public class PaypalPay implements PayService {
     @Override
     public void payProc(double amount) {
