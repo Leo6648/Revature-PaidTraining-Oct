@@ -6,11 +6,11 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Prototype payment methods -->
-    <bean id="creditCardPayment" class="com.revature.ecommerce.payment.CreditCardPaymentService" scope="prototype"/>
-    <bean id="paypalPayment" class="com.revature.ecommerce.payment.PaypalPaymentService" scope="prototype"/>
+    <bean id="creditCardPayment" class="com.revature.payproc.jc.CreditCardPay" scope="prototype"/>
+    <bean id="paypalPayment" class="com.revature.payproc.jc.PayPalPay" scope="prototype"/>
 
     <!-- Order service, wired to CreditCard by default -->
-    <bean id="orderService" class="com.revature.ecommerce.order.OrderService" scope="prototype">
+    <bean id="orderService" class="com.revature.payproc.jc.OrderService" scope="prototype">
         <property name="paymentService" ref="creditCardPayment"/>
     </bean>
 
