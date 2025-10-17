@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Profile</title>
+  <link rel="stylesheet" href="css/styles2.css" />
+</head>
+<body>
+  <div class="main-container">
+    <div class="profile-card">
+      <img src="images/IMG_1224.jpg" alt="Profile Picture" class="profile-pic">
+      <h1 id="fullname">Default Name</h1>
+      <p class="bio">Aspiring Game Designer passionate that wish to pursue the path of a Software Engineer</p>
+
+      <div class="info">
+        <p><strong>Email:</strong> <span id="email">Default Email</span></p>
+        <p><strong>Phone:</strong> <span id="phone">Default Phone</span></p>
+        <p><strong>Course:</strong> <span id="course">Default Course</span></p>
+      </div>
+      <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>A personal game design portfolio website showcasing academic and personal projects</p>
+          <p><strong>Portfolio:</strong> <span id="portfolio">Not provided</span></p>
+      </div>
+      <div class="back-btn">
+        <a href="index.html" class="btn">Go Back</a>
+      </div>
+    </div>
+
+    <div class="sections-container">
+      <!-- About Section -->
+      <section class="section about">
+        <h2>About</h2>
+        <p>I'm a Game Design graduate passionate about creating immersive, interactive experiences. I have always been passionate about gaming and wanted to learn about game development.
+        With a background in computer science and design, I thrive at the intersection of creativity and logic. I came across Revature so I decided to pursue software engineering.</p>
+        <p>My technical skills include proficiency in Java, SQL, and Spring. I’ve also built backend systems using Spring Boot and have a working knowledge of RESTful APIs, databases (SQL), and Git version control.
+        I'm constantly exploring new ways to grow as a developer. Currently, I’m seeking opportunities where I can contribute to impactful projects and grow within a collaborative environment.</p>
+      </section>
+      <!-- Experience Section -->
+      <section class="section experience">
+        <h2>Experience</h2>
+        <div class="exp-item">
+          <h3>Revature Java Intern</h3>
+          <p><em>Apr 2025 – Jun 2025</em></p>
+          <ul>
+            <li>Developed programming skills in Java, SQL, RESTful API Construction and Spring Framework</li>
+            <li>Implemented project work including construction of functional REST APIs using Test Driven Development methodologies</li>
+            <li>Completed 108 Coding Activities</li>
+            <li>Showcased understanding of concepts through fourteen (14) evaluations</li>
+            <li>Leverage Java APIs to write algorithms to solve various challenges and problem sets</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section skills">
+        <h2>Tech Stack</h2>
+        <ul>
+          <li>Java</li>
+          <li>Python</li>
+          <li>C#</li>
+          <li>Spring</li>
+          <li>Rest APIs</li>
+          <li>SQL</li>
+        </ul>
+      </section>
+
+      
+
+      <!-- Projects Section -->
+      <section class="section projects">
+        <h2>Projects</h2>
+        
+        <div class="exp-item">
+          <h3>Social Media Blog API</h3>
+          <p><em>Apr 2025 – Jun 2025</em></p>
+          <ul>
+            <li>Create endpoints for RESTful API with Javalin</li>
+            <li>Learned Controller-Service-DAO Architecture</li>
+            <li>Handled User Registration & Login Logic</li>
+            <li>Used PreparedStatement to prevent SQL injection</li>
+          </ul>
+        </div>
+
+        <div class="exp-item">
+          <h3>Spring Social Media Blog API</h3>
+          <p><em>Apr 2025 – Jun 2025</em></p>
+          <ul>
+            <li>Utilized different annotations such as @RestController...</li>
+            <li>Established Dependency Injection using @Autowired</li>
+            <li>Programmed the repositories and services for database access</li>
+            <li>Set validation and error handling...</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+  // Read URL parameters from the registration form
+  const params = new URLSearchParams(window.location.search);
+
+  const fullname = params.get("fullname") || "Not provided";
+  const email = params.get("email") || "Not provided";
+  const phone = params.get("phone") || "Not provided";
+  const course = params.get("course") || "Not provided";
+  const portfolio = params.get("portfolio") || "";
+
+  // Insert values into the page
+  document.getElementById("fullname").textContent = fullname;
+  document.getElementById("email").textContent = email;
+  document.getElementById("phone").textContent = phone;
+  document.getElementById("course").textContent = course;
+
+  // Display portfolio link if provided
+  const portfolioSpan = document.getElementById("portfolio");
+  if (portfolio) {
+      portfolioSpan.innerHTML = `<a href="${portfolio}" target="_blank">${portfolio}</a>`;
+  } else {
+      portfolioSpan.textContent = "Not provided";
+  }
+  </script>
+
+</body>
+
+</html>
+
+
