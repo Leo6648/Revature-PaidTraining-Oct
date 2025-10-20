@@ -24,6 +24,29 @@ body {
     max-width: 450px;
 }
 
+.gender-box {
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #f9f9f9;
+}
+
+.gender-options {
+    display: flex;
+    gap: 2.5rem;
+    justify-content: flex-start;
+}
+
+.gender-options label {
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.gender-options input[type="radio"] {
+    margin-right: 0rem;
+}
+
 h2 {
     text-align: center;
     color: #3f2b96;

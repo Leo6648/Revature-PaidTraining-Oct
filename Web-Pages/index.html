@@ -18,9 +18,26 @@
 
     <label>Phone Number</label>
     <input type="tel" name="phone" placeholder="Enter your phone number" required>
+    
+    <label>Gender</label>
+    <div class="gender-options">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Non-binary"> Non-binary</label>
+    </div>
 
+    <label>Date of Birth</label>
+    <input type="date" name="dob" required>
+    
+    <!-- Course Dropdown -->
     <label>Course</label>
-    <input type="text" name="course" placeholder="Enter your course" required>
+    <select name="course" required>
+        <option value="">Select a course</option>
+        <option value="Computer Science">Computer Science</option>
+        <option value="Information Technology">Information Technology</option>
+        <option value="Game Design">Game Design</option>
+        <option value="Mathematics">Mathematics</option>
+    </select>
 
     <label>Portfolio URL</label>
     <input type="url" name="portfolio" placeholder="Enter your portfolio link">
