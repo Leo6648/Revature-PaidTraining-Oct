@@ -1,17 +1,35 @@
+import { useState } from "react";
+
 function CelChild(){
+    const [Faren, setFaren] = useState(0);
+    const [Cel, setCel] = useState(0);
+    function handleChange(event) {
+        setCel(event.target.value);
+    }
+
+    function handleConvert(){
+        const f = ((Faren + 32) * 9) / 5;
+        setFaren(f.toFixed(2));
+    }
     return(
         <>
-            <p>Clesius</p>
+        <div>
+            <h1>Celsius</h1>
+            <p>Enter Celsius Degree</p>
             <input
             type="number"
-            placeholder="Enter Number"
+            value={Cel}
+            onChange={handleChange}
             />
+            <p>Result</p>
             <input
             type="number"
-            placeholder="Enter Number"
+            value={Faren}
             readOnly
             />
-            <button>Submit</button>
+            <br></br>
+            <button onClick={handleConvert}>Convert Celsius</button>
+        </div>
         </>
         
     );

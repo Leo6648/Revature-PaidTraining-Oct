@@ -1,19 +1,35 @@
+import { useState } from "react";
 function FarenChild(){
+    const [Faren, setFaren] = useState(0);
+    const [Cel, setCel] = useState(0);
+    function handleChange(event) {
+        setFaren(event.target.value);
+    }
+
+    function handleConvert(){
+        const c = ((Faren - 32) * 5) / 9;
+        setCel(c.toFixed(2));
+    }
     return(
         <>
-            <p>Fahrenheit</p>
+        <div>
+            <h1>Fahrenheit</h1>
+            <p>Enter Farenheit Degree</p>
             <input
             type="number"
-            placeholder="Enter Number"
+            value={Faren}
+            onChange={handleChange}
             />
+            <p>Result</p>
             <input
             type="number"
-            placeholder="Enter Number"
+            value = {Cel}
             readOnly
             />
-            <button>Submit</button>
+            <br></br>
+            <button onClick={handleConvert}>Convert Farenheit</button>
+        </div>
         </>
-        
     );
 }
 
